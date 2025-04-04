@@ -32,3 +32,15 @@ gcc -o vector_add vector_add.c -I./ggml/include ./ggml/build/src/libggml.so ./gg
 
 4. Measure time
 time ./vector_add
+
+5. Test with math.h
+
+gcc -o vector_add_math vector_add_math.c -lm
+
+6. Performance comparison with more complex matrix ops
+
+gcc -o matrix_math matrix_math.c -lm -O3
+
+gcc -o matrix_ggml matrix_ggml.c ./ggml/build/src/libggml.so ./ggml/build/src/libggml-base.so ./ggml/build/src/libggml-cpu.so -I./ggml/include -lm -O3
+
+Result: math.h 0.37s & ggml.h 0.33s
