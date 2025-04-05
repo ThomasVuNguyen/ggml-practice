@@ -44,3 +44,8 @@ gcc -o matrix_math matrix_math.c -lm -O3
 gcc -o matrix_ggml matrix_ggml.c ./ggml/build/src/libggml.so ./ggml/build/src/libggml-base.so ./ggml/build/src/libggml-cpu.so -I./ggml/include -lm -O3
 
 Result: math.h 0.37s & ggml.h 0.33s
+
+
+7. Try out simple-proj
+
+g++ -o simple-backend simple-backend.cpp -I../ggml/include ../ggml/build/src/libggml.so ../ggml/build/src/libggml-base.so ../ggml/build/src/libggml-cpu.so -lm -lstdc++
