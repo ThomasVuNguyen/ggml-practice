@@ -49,3 +49,5 @@ Result: math.h 0.37s & ggml.h 0.33s
 7. Try out simple-proj
 
 g++ -o simple-backend simple-backend.cpp -I../ggml/include ../ggml/build/src/libggml.so ../ggml/build/src/libggml-base.so ../ggml/build/src/libggml-cpu.so -lm -lstdc++
+
+gcc -o simple-backend simple-backend.cpp -I../ggml/include ../ggml/build/src/libggml.so ../ggml/build/src/libggml-base.so ../ggml/build/src/libggml-cpu.so -lm -lstdc++
